@@ -2,7 +2,7 @@ function x = Cubic(a,b,c,d)
     if a == 0 && b == 0
        x = -d/c;
     elseif a == 0
-       delta = c.^2 - 4.00*b*d;
+       delta = c.^2 - (4.00*b*d);
        delta = sqrt(delta);
        x1 = (-c + delta)/(2*b);
        x2 = (-c - delta)/(2*b);
@@ -18,6 +18,7 @@ function x = Cubic(a,b,c,d)
                sol = (-d / a).^(1/3.0);
            end
            x = [sol,sol,sol];
+
        elseif( H <= 0) 
             i = sqrt((G.^2.0 / 4.0) - H);
             j = i.^(1 / 3.0);
